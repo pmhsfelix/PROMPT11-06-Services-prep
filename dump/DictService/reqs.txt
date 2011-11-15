@@ -1,0 +1,42 @@
+POST http://localhost:8080/dict HTTP/1.1
+Accept-Encoding: gzip,deflate
+Content-Type: text/xml;charset=UTF-8
+SOAPAction: "http://tempuri.org/ITheServiceContract/WordLookup"
+User-Agent: Jakarta Commons-HttpClient/3.1
+Host: localhost:8080
+Connection: Keep-Alive
+Content-Length: 459
+
+<soapenv:Envelope 
+		xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" 
+		xmlns:tem="http://tempuri.org/" 
+		xmlns:sim="http://schemas.datacontract.org/2004/07/SimpleDictService">
+    <soapenv:Header/>
+    <soapenv:Body>
+        <tem:WordLookup>         
+            <tem:Request>            
+                <sim:Word>professor</sim:Word>
+            </tem:Request>
+        </tem:WordLookup>
+   </soapenv:Body>
+</soapenv:Envelope>
+
+
+HTTP/1.1 200 OK
+Content-Length: 449
+Content-Type: text/xml; charset=utf-8
+Server: Microsoft-HTTPAPI/2.0
+Date: Fri, 11 Nov 2011 15:35:38 GMT
+
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+    <s:Body>
+        <WordLookupResponse xmlns="http://tempuri.org/">
+            <WordLookupResult 
+			xmlns:a="http://schemas.datacontract.org/2004/07/SimpleDictService" 
+			xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+                <a:Definition>Aquele que ensina uma arte, uma actividade, uma ciência, uma língua, etc.</a:Definition>
+                <a:Exists>true</a:Exists>
+            </WordLookupResult>
+        </WordLookupResponse>
+    </s:Body>
+</s:Envelope>

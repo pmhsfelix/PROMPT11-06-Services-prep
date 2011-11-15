@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="SimpleDictClient.DictServiceReference.TheServiceContractClient">
+    <Position X="3" Y="4.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Service References\DictServiceReference\Reference.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="System.ServiceModel.ClientBase&lt;TChannel&gt;">
+    <Position X="3" Y="1" Width="2.75" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <NestedTypes>
+      <Delegate Name="System.ServiceModel.ClientBase&lt;TChannel&gt;.BeginOperationDelegate" Collapsed="true">
+        <TypeIdentifier />
+      </Delegate>
+      <Delegate Name="System.ServiceModel.ClientBase&lt;TChannel&gt;.EndOperationDelegate" Collapsed="true">
+        <TypeIdentifier />
+      </Delegate>
+      <Class Name="System.ServiceModel.ClientBase&lt;TChannel&gt;.InvokeAsyncCompletedEventArgs" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier />
+    <ShowAsAssociation>
+      <Property Name="InnerChannel" />
+      <Property Name="ChannelFactory" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="System.ServiceModel.ChannelFactory&lt;TChannel&gt;">
+    <Position X="10.25" Y="1" Width="2.5" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="SimpleDictClient.DictServiceReference.ITheServiceContract">
+    <Position X="6.25" Y="3.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Service References\DictServiceReference\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="SimpleDictClient.DictServiceReference.ITheServiceContractChannel" Collapsed="true">
+    <Position X="6.5" Y="5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Service References\DictServiceReference\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="System.ServiceModel.IClientChannel" Collapsed="true">
+    <Position X="7.5" Y="1.5" Width="2" />
+    <TypeIdentifier />
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

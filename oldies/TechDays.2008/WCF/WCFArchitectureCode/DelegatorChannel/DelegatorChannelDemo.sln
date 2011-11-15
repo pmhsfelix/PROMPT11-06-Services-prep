@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DelegatorChannel", "DelegatorChannel\DelegatorChannel.csproj", "{F50B5819-D8D6-4991-B69C-6BF6E79D6AF9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestApp", "TestApp\TestApp.csproj", "{F3AC71BC-E9AF-4937-89FD-4560E5BCC96E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F50B5819-D8D6-4991-B69C-6BF6E79D6AF9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F50B5819-D8D6-4991-B69C-6BF6E79D6AF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F50B5819-D8D6-4991-B69C-6BF6E79D6AF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F50B5819-D8D6-4991-B69C-6BF6E79D6AF9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F3AC71BC-E9AF-4937-89FD-4560E5BCC96E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3AC71BC-E9AF-4937-89FD-4560E5BCC96E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3AC71BC-E9AF-4937-89FD-4560E5BCC96E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3AC71BC-E9AF-4937-89FD-4560E5BCC96E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

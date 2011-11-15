@@ -1,0 +1,40 @@
+* Introdução ao WCF
+	- Slide: "modelo unificado e extensível"
+	- Slide: evolução do .NET 3.0 e do .NET 3.5
+	
+* Modelo de programação visível ao programador
+	
+* Arquitectura de execução
+	- Slide: a arquitectura de execução
+	- Slide: tipo Message
+	- Slide: elementos da arquitectura contribuição para a mensagem
+	
+* Bindings
+	- Slide: binding como descrição, exemplo do WSHttpBinding
+	- Slide: bindings standard, tipo CustomBinding, exemplo de construção de CustomBinding
+	! Formação de troços de código nos slides
+	- Demo: usar email, assinatura digital, XMPP
+	
+* Dispatcher
+	- Slide: Interface entro o "mundo das mensagens" e o "mundo dos objectos", tarefas realizadas
+	- Slide: arquitectura do dispatcher
+	- Slide: funcionalidades dos behaviors
+	
+	- Slide: artefactos -> descrição -> runtime
+	! Referir o uso de reflecção
+	- Slide: modelo de objectos da descrição
+	- Demo: breakpoint após a construção do ServiceHost e análise da propriedade Description
+	? Colocação deste bloco:
+		h1: Antes de falar sobre os binding (imediatamente a seguir a ter apresendo a arq. de execução)
+		h2: Antes de falar sobre o dispatcher
+		h3: A meio da falar sobre o dispacher
+		
+	- Slide: uso interno de behaviors
+	- Slide: bindigs e behaviors
+	- Slide (x4): interface dos diversos tipos de behavior
+	
+	- Demo: demos de behaviors (a definir)
+	
+	! Faltam:
+	- Slides com o "refresh" do modelo de programação visivel ao programador
+	

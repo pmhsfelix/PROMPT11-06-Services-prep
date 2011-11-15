@@ -1,0 +1,46 @@
+POST http://api.microsofttranslator.com/V2/soap.svc HTTP/1.1
+Content-Type: text/xml; charset=utf-8
+SOAPAction: "http://api.microsofttranslator.com/V2/LanguageService/GetTranslations"
+Host: api.microsofttranslator.com
+Content-Length: 450
+Expect: 100-continue
+Accept-Encoding: gzip, deflate
+
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+	<s:Body>
+		<GetTranslations 	xmlns="http://api.microsofttranslator.com/V2">
+			<appId>C1E6D88CE2967328BBA9BC6C932B9D177247CAE5</appId>
+			<text>hello</text>
+			<from>en</from>
+			<to>pt</to>
+			<maxTranslations>1</maxTranslations>
+			<options xmlns:a="http://schemas.datacontract.org/2004/07/Microsoft.MT.Web.Service.V2" xmlns:i="http://www.w3.org/2001/XMLSchema-instance"/>
+		</GetTranslations>
+	</s:Body>
+</s:Envelope>
+
+HTTP/1.1 200 OK
+Content-Length: 602
+Content-Type: text/xml; charset=utf-8
+X-MS-Trans-Info: s=63644
+Date: Fri, 11 Nov 2011 13:32:50 GMT
+
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+	<s:Body>
+		<GetTranslationsResponse xmlns="http://api.microsofttranslator.com/V2">
+			<GetTranslationsResult xmlns:a="http://schemas.datacontract.org/2004/07/Microsoft.MT.Web.Service.V2" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+				<a:From>en</a:From>
+				<a:Translations>
+					<a:TranslationMatch>
+						<a:Count>0</a:Count>
+						<a:MatchDegree>100</a:MatchDegree>
+						<a:MatchedOriginalText/>
+						<a:Rating>5</a:Rating>
+						<a:TranslatedText>Olá</a:TranslatedText>
+					</a:TranslationMatch>
+				</a:Translations>
+			</GetTranslationsResult>
+		</GetTranslationsResponse>
+	</s:Body>
+</s:Envelope>
+

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://www.showmyip.com/soap2008/lookup/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns="http://schemas.xmlsoap.org/wsdl/" targetNamespace="http://www.showmyip.com/soap2008/lookup/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://www.showmyip.com/soap2008/lookup/">
+      <xsd:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
+      <xsd:import namespace="http://schemas.xmlsoap.org/wsdl/" />
+      <xsd:complexType name="IP_Address_Lookup_Properties">
+        <xsd:all>
+          <xsd:element name="IP" type="xsd:string" />
+          <xsd:element name="HOST" type="xsd:string" />
+          <xsd:element name="COUNTRY" type="xsd:string" />
+          <xsd:element name="COUNTRY_CODE3" type="xsd:string" />
+          <xsd:element name="STATE" type="xsd:string" />
+          <xsd:element name="CITY" type="xsd:string" />
+          <xsd:element name="ISP" type="xsd:string" />
+          <xsd:element name="ORG" type="xsd:string" />
+          <xsd:element name="DATETIME_STAMP" type="xsd:string" />
+          <xsd:element name="TIMESERVER_STAMP" type="xsd:string" />
+          <xsd:element name="VERSION" type="xsd:string" />
+          <xsd:element name="COMMENTS" type="xsd:string" />
+          <xsd:element name="CURRENCY_CODE" type="xsd:string" />
+          <xsd:element name="CURRENCY_NAME" type="xsd:string" />
+          <xsd:element name="CONTINENT" type="xsd:string" />
+          <xsd:element name="NATIONALITY" type="xsd:string" />
+          <xsd:element name="AREA_CODE" type="xsd:string" />
+          <xsd:element name="POSTAL_ZIP_CODE" type="xsd:string" />
+          <xsd:element name="DMA_CODE" type="xsd:string" />
+          <xsd:element name="LATITUDE" type="xsd:string" />
+          <xsd:element name="LONGITUDE" type="xsd:string" />
+          <xsd:element name="TIMEZONE" type="xsd:string" />
+          <xsd:element name="TOR_DETECTION" type="xsd:string" />
+          <xsd:element name="RBL_DNSBL_STATUS" type="xsd:string" />
+        </xsd:all>
+      </xsd:complexType>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="callshowmyip_lookupRequest">
+    <wsdl:part name="lookup_ip" type="xsd:string" />
+    <wsdl:part name="lookup_host" type="xsd:string" />
+    <wsdl:part name="lookup_iplong" type="xsd:string" />
+    <wsdl:part name="optional_language_code" type="xsd:string" />
+    <wsdl:part name="optional_subscription_key" type="xsd:string" />
+    <wsdl:part name="optional_get_field_names" type="xsd:string" />
+    <wsdl:part name="optional_lookup_options" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="callshowmyip_lookupResponse">
+    <wsdl:part name="return" type="tns:IP_Address_Lookup_Properties" />
+  </wsdl:message>
+  <wsdl:portType name="callshowmyip_lookupPortType">
+    <wsdl:operation name="callshowmyip_lookup">
+      <wsdl:input message="tns:callshowmyip_lookupRequest" />
+      <wsdl:output message="tns:callshowmyip_lookupResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="callshowmyip_lookupBinding" type="tns:callshowmyip_lookupPortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="rpc" />
+    <wsdl:operation name="callshowmyip_lookup">
+      <soap:operation soapAction="http://www.showmyip.com/soap2008/lookupserver.php/callshowmyip_lookup" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="http://www.showmyip.com/soap2008/lookup/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="http://www.showmyip.com/soap2008/lookup/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="callshowmyip_lookup">
+    <wsdl:port name="callshowmyip_lookupPort" binding="tns:callshowmyip_lookupBinding">
+      <soap:address location="http://www.showmyip.com/soap2008/lookupserver.php" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
