@@ -11,6 +11,7 @@ AssemblyInfo.cs
 .DS_Store
 deploy/
 build/
+oldies/
 [Bb]in/
 [Dd]ebug/
 [Oo]bj/
